@@ -1,3 +1,6 @@
-@baseUrl = http://lumen-7-gado.test
+@baseUrl = {{$dotenv APP_URL}}
 
 GET {{baseUrl}}
+
+### Books
+GET {{baseUrl}}/api/books

@@ -14,3 +14,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api) {
+    $api->group(['prefix' => 'books'], function ($api) {
+        $api->get('/', function(){
+            return 'lorem ipsum';
+        });
+    });
+});
